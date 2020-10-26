@@ -13,12 +13,9 @@ func createRandomArr(length int) []int {
 	return arr
 }
 
-func TestQuickSort(t *testing.T) {
-	arr := []int{5, 4}
-	QuickSort(arr)
+func TestInsertionSort(t *testing.T) {
+	arr := createRandomArr(10000)
 	t.Log(arr)
-
-	arr = createRandomArr(10000)
-	QuickSort(arr)
+	InsertionSort(arr, len(arr))
 	t.Log(arr)
 }

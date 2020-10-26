@@ -8,17 +8,14 @@ import (
 func createRandomArr(length int) []int {
 	arr := make([]int, length, length)
 	for i := 0; i < length; i++ {
-		arr[i] = rand.Intn(10000)
+		arr[i] = rand.Intn(100)
 	}
 	return arr
 }
 
-func TestQuickSort(t *testing.T) {
-	arr := []int{5, 4}
-	QuickSort(arr)
+func TestBubbleSort(t *testing.T) {
+	arr := createRandomArr(10)
 	t.Log(arr)
-
-	arr = createRandomArr(10000)
-	QuickSort(arr)
+	BubbleSort(arr)
 	t.Log(arr)
 }
